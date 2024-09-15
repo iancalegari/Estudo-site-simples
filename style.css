@@ -8,6 +8,12 @@
   font-weight: 350;
   font-style: normal;
 }
+@font-face {
+  font-family: "Giphurs";
+  src: url("Fonts/Giphurs-Black.otf") format("opentype"),
+    url("Fonts/GiphursSC-Medium.otf") format("truetype");
+  font-weight: 50;
+}
 
 body {
   background: #ece9e6;
@@ -21,8 +27,7 @@ body {
 }
 
 h1 {
-  font-family: "NeueKabel", sans-serif;
-  font-weight: 350;
+  font-family: "Giphurs", sans-serif;
   color: #ffffff;
   position: fixed;
   top: 8px;
@@ -45,15 +50,28 @@ h1 {
 }*/
 
 .textocaixatitulo {
-  font-family: "Inter", serif;
+  font-family: "Giphurs", sans-serif;
   color: #ffffff;
   position: absolute; /* aqui é para o texto ficar em cima da imagem que coloquei no fundo */
-  top: 8%;
-  left: 15%;
+  top: 18%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 95px;
-  max-width: 90%;
+  font-size: 35px;
+  word-break: break-word;
+  width: 100%;
 }
+
+/*h2 {
+  font-family: "Giphurs", sans-serif;
+  font-weight: 50;
+  color: #ffffff;
+  position: fixed;
+  top: 8px;
+  left: -90%;
+  transform: translateX(50%);
+  font-size: 30px;
+  width: 100%;
+}*/
 
 .terraimg {
   position: absolute;
@@ -128,10 +146,10 @@ p {
   position: relative;
 }
 
-/* Botão */
+/* Botão adicionado e configurações */
 button {
   position: absolute;
-  top: -65px;
+  top: -68px;
   left: 92%;
   transform: translateX(-50%);
   padding: 7px 10px;
