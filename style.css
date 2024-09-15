@@ -15,7 +15,7 @@ body {
   background: linear-gradient(to right, #ffffff, #ece9e6);
   text-align: center;
   margin: 0;
-  border-top: 90px solid #000000;
+  border-top: 90px solid #000000; /* Caixa preta no topo */
   position: relative;
   overflow-x: hidden;
 }
@@ -128,20 +128,79 @@ p {
   position: relative;
 }
 
+/* Botão */
 button {
-  font-size: 1.5rem;
-  color: #fafafa;
+  position: absolute;
+  top: -65px;
+  left: 92%;
+  transform: translateX(-50%);
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(119, 0, 255);
+  font-size: 14px;
   text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 2px solid #fafafa;
-  background: #252525;
-  box-shadow: 3px 3px #fafafa;
-  cursor: pointer;
-  margin: 35px 0;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+  background: rgb(98, 0, 255);
+  box-shadow: 0 0 15px 5px rgba(90, 0, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
 }
 
 button:active {
-  box-shadow: none;
-  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
 }
