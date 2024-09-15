@@ -3,20 +3,21 @@
 
 @font-face {
   font-family: "NeueKabel";
-  src: url("NeueKabel-Black.otf") format("opentype"),
-    url("NeueKabel-Medium.otf") format("truetype");
+  src: url("Fonts/NeueKabel-Black.otf") format("opentype"),
+    url("Fonts/NeueKabel-Medium.otf") format("truetype");
   font-weight: 350;
   font-style: normal;
 }
 
 body {
-  background: #0f0c29;
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: #ece9e6;
+  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
+  background: linear-gradient(to right, #ffffff, #ece9e6);
   text-align: center;
   margin: 0;
   border-top: 90px solid #000000;
   position: relative;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -53,18 +54,28 @@ h1 {
 }
 
 img {
-  width: 1920px;
-  height: 455px;
-  position: relative; /* tem que ter para que o texto fique em cima dessa imagem */
+  padding-bottom: 5px;
+  width: 100%;
+  height: auto;
+  position: relative; /* necessário para o texto ficar em cima da imagem */
 }
 
 .conteudo-texto {
   font-family: "Inter", serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: normal;
-  color: #000000;
-  text-align: center;
-  margin: 20px;
+  color: #1b1b1b;
+  text-align: justify;
+  margin-left: 500px;
+  margin-right: 500px;
+  position: relative;
+}
+h3 {
+  font-family: "Inter", serif;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #1b1b1b;
+  text-align: left;
   position: relative;
 }
 
@@ -72,9 +83,8 @@ img {
   font-family: "Inter", serif;
   color: #ffffff;
   position: absolute; /* aqui é para o texto ficar em cima da imagem que coloquei no fundo */
-  top: 20%;
+  top: 12%;
   left: 15%;
-  transform: translate(-50%, -50%); /* usado para centralizar esse texto */
-  font-size: 80px;
-  width: max content 100px;
+  transform: translate(-50%, -50%);
+  font-size: 95px;
 }
