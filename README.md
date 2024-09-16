@@ -5,4 +5,5 @@ Utilizando HTML, CSS e JavaScript.
 Futuramente, será incorporado um framework para expandir suas funcionalidades.
 
 linkedin: https://www.linkedin.com/in/ian-calegari/
+ 
 behance: https://www.behance.net/iancalegari
