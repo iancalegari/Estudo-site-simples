@@ -16,64 +16,68 @@
   font-weight: 50;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #ece9e6;
   background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
   background: linear-gradient(to right, #ffffff, #ece9e6);
-  text-align: center;
   margin: 0;
-  border-top: 90px solid #000000; /* Caixa preta no topo */
-  position: relative;
   /*overflow-x: hidden;*/
 }
 
-.imagemcontainer {
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
+
+.titulopagina {
+  font-family: "Giphurs", sans-serif;
+  color: #ffffff;
   position: relative;
-}
-
-h1 {
-  font-family: "Giphurs", sans-serif;
-  color: #ffffff;
-  position: fixed;
-  top: 8px;
-  left: -90%;
-  transform: translateX(50%);
-  font-size: 30px;
-  width: 100%;
-}
-.textocaixatitulo {
-  font-family: "Giphurs", sans-serif;
-  color: #ffffff;
-  position: absolute;
-  top: 150px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 10px;
+  left: 20px;
   font-size: 35px;
-  padding: 0 20px;
-  max-height: 150px;
-  width: auto;
-}
-
-.terraimg {
-  position: absolute;
-  top: -78px;
-  left: -50%;
-  transform: translateX(50%);
-  font-size: 50px;
   width: 100%;
 }
 
-img {
-  padding-bottom: 0px;
-  margin: 0px;
-  border: 0px;
+.emojiplaneta {
+  position: relative;
+  top: 0px;
+  left: -35px;
+  font-size: 45px;
   width: 100%;
-  height: auto;
-  position: relative; /* necessário para o texto ficar em cima da imagem */
+}
+
+.imagemcontainer {
+  display: flex;
+  font-family: "Giphurs", sans-serif;
+  color: #ffffff;
+  font-size: 45px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 555.68px;
+  background-image: url("./Img/sistemasolar.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .conteudo-texto,
 .ordem-planeta {
+  z-index: 2;
   font-family: "Inter", serif;
   font-size: 16px;
   font-weight: normal;
@@ -82,7 +86,9 @@ img {
   line-height: 1.3;
   text-indent: 15px;
   margin: 0 auto; /* centralizando horizontalmente */
+  margin-bottom: 10px;
   padding: 0 15px;
+  padding-top: 35px;
   max-width: 800px; /* limitando o width máximo do texto */
   position: relative;
 }
@@ -93,8 +99,13 @@ h4 {
   font-size: 50px;
   font-weight: bolder;
   color: #1b1b1b;
-  text-align: left;
   position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  z-index: 2;
 }
 
 p {
@@ -104,15 +115,21 @@ p {
   color: #1b1b1b;
   line-height: 1.3;
   text-indent: 15px;
-  text-align: justify;
   position: relative;
   padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  z-index: 2;
 }
 
+/* BOTÃO */
+
 button {
-  position: absolute;
-  top: -68px;
-  left: 92%;
+  position: relative;
+  top: -53px;
+  left: 93%;
   transform: translateX(-50%);
   padding: 7px 10px;
   border-radius: 5px;
@@ -149,7 +166,7 @@ button::before {
   display: block;
   width: 0px;
   height: 86%;
-  position: absolute;
+  position: relative;
   top: 7%;
   left: 0%;
   opacity: 0;
@@ -192,4 +209,11 @@ button:active {
   font-family: "Inter", serif;
   font-size: 20px;
   font-weight: normal;
+}
+
+@media screen and (min-width: 1235px) and (max-height: 1117px) {
+  .textocaixatitulo {
+    left: 20px;
+    top: 80px;
+  }
 }
