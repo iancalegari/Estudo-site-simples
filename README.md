@@ -1,0 +1,1 @@
+Desenvolvimento de um site como projeto de estudo para o curso de Ciência da Computação, utilizando HTML, CSS e JavaScript. Futuramente, será incorporado um framework para expandir suas funcionalidades.
