@@ -24,7 +24,7 @@ body {
   margin: 0;
   border-top: 90px solid #000000; /* Caixa preta no topo */
   position: relative;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 .imagemcontainer {
