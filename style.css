@@ -27,7 +27,6 @@ body {
   background: #ece9e6;
   background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
   background: linear-gradient(to right, #ffffff, #ece9e6);
-  /*overflow-x: hidden;*/
 }
 
 .header {
@@ -81,13 +80,12 @@ body {
   font-size: 16px;
   font-weight: normal;
   color: #1b1b1b;
-  /* text-align: justify; */
   line-height: 1.3;
-  margin: 0 auto; /* centralizando horizontalmente */
+  margin: 0 auto;
   margin-bottom: 10px;
   padding: 0 15px;
   padding-top: 35px;
-  max-width: 800px; /* limitando o width máximo do texto */
+  max-width: 800px;
   position: relative;
 }
 
@@ -123,17 +121,17 @@ p {
 
 /* ADICIONANDO IMAGENS */
 .Imgs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
   gap: 28px;
   width: 100%;
   height: auto;
   padding: 20px;
   margin-top: auto;
 }
+
 .Imgs img {
-  width: 235px;
+  width: 100%;
   height: 235px;
   object-fit: cover;
   border-radius: 10px;
@@ -225,9 +223,9 @@ button:active {
   font-weight: normal;
 }
 
-@media screen and (min-width: 1235px) and (max-height: 1117px) {
-  .textocaixatitulo {
-    left: 20px;
-    top: 80px;
+/* responsividade para tela menor, a gente utiliza sempre o @media com a classe a ser trabalhada.  */
+@media screen and (max-width: 768px) {
+  .Imgs {
+    grid-template-columns: 1fr;
   }
 }
