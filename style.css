@@ -48,13 +48,13 @@ body {
   width: 100%;
 }
 
-.emojiplaneta {
+/* .emojiplaneta {
   position: relative;
   top: 0px;
   left: -82px;
   font-size: 45px;
   width: 100%;
-}
+} */
 
 .imagemcontainer {
   display: flex;
@@ -144,9 +144,9 @@ button {
   border-radius: 5px;
   border: 2px solid rgb(119, 0, 255);
   font-size: 14px;
-  font-weight: 100px;
+  font-weight: 50px;
   height: 45px;
-  width: 245px;
+  width: 150px;
   padding-right: auto;
   background: transparent;
   color: #fff;
